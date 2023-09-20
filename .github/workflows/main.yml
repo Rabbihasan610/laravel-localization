@@ -19,7 +19,7 @@ jobs:
         server: ftp.drutosoft.net
         username: hasan@drutoshoes.drutosoft.net
         password: hasan_610
-        server-dir: /home/drutosof/drutoshoes.drutosoft.net
+        server-dir: /home/drutosof/drutoshoes.drutosoft.net/
     - uses: actions/checkout@v3
     - name: Copy .env
       run: php -r "file_exists('.env') || copy('.env.example', '.env');"
