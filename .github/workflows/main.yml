@@ -31,7 +31,7 @@ jobs:
       run: chmod -R 755 storage bootstrap/cache # Adjust permissions as needed
 
     - name: Deploy to FTP
-      uses: SamKirkland/FTP-Deploy-Action@v4
+      uses:  SamKirkland/FTP-Deploy-Action@v4.3.4
       with:
         server: ftp.drutosoft.net
         username: ${{ secrets.FTP_USERNAME }}
