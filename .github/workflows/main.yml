@@ -13,6 +13,13 @@ jobs:
     - uses: shivammathur/setup-php@15c43e89cdef867065b0213be354c2841860869e
       with:
         php-version: '8.0'
+    - name: 📂 Sync files
+      uses: SamKirkland/FTP-Deploy-Action@v4.3.4
+      with:
+        server: ftp.drutosoft.net
+        username: hasan@drutoshoes.drutosoft.net
+        password: hasan_610
+        server-dir: /home/drutosof/drutoshoes.drutosoft.net
     - uses: actions/checkout@v3
     - name: Copy .env
       run: php -r "file_exists('.env') || copy('.env.example', '.env');"
